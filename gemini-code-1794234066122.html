@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giáo Trình HSK 4 - Bài 1: 简单的爱情</title>
+    <style>
+        :root {
+            --primary-color: #c0392b;
+            --secondary-color: #e74c3c;
+            --accent-color: #f39c12;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-color: #2c3e50;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            background-color: #7f8c8d;
+            padding: 0.5rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav button {
+            background: transparent;
+            border: 1px solid white;
+            color: white;
+            padding: 0.5rem 1rem;
+            margin: 0 0.2rem;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+
+        nav button.active, nav button:hover {
+            background-color: white;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .lesson-section {
+            display: none;
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+        }
+
+        .lesson-section.active {
+            display: block;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            color: var(--secondary-color);
+            margin-top: 1.5rem;
+        }
+
+        /* Vocab Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        th, td {
+            padding: 0.8rem;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            color: var(--primary-color);
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        .hz {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .py {
+            color: #e67e22;
+        }
+
+        /* Grammar Box */
+        .grammar-card {
+            background-color: #fcf8e3;
+            border-left: 5px solid var(--accent-color);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .example {
+            margin-left: 1rem;
+            font-style: italic;
+            color: #555;
+        }
+
+        /* Exercise Quiz */
+        .quiz-item {
+            background: #edf2f7;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 6px;
+        }
+
+        .quiz-item button {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 0.5rem;
+        }
+
+        .answer {
+            display: none;
+            margin-top: 0.5rem;
+            padding: 0.5rem;
+            background: #d4edda;
+            color: #155724;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>GIÁO TRÌNH CHUẨN HSK 4 - TẬP 1</h1>
+        <p>Hệ thống bài học tương tác: Từ vựng - Ngữ pháp - Bài tập nâng cao</p>
+    </header>
+
+    <nav id="navbar">
+        <button onclick="showLesson(1)" class="active">Bài 1</button>
+        <button onclick="showLesson(2)">Bài 2</button>
+        <button onclick="showLesson(3)">Bài 3</button>
+        <button onclick="showLesson(4)">Bài 4</button>
+        <button onclick="showLesson(5)">Bài 5</button>
+    </nav>
+
+    <div class="container">
+
+        <!-- BÀI 1 -->
+        <div id="lesson-1" class="lesson-section active">
+            <h2>第1课：简单的爱情 (Tình yêu đơn giản)</h2>
+
+            <h3>1. Từ mới (生词)</h3>
+            <table>
+                <tr><th>Hán tự</th><th>Pinyin</th><th>Loại từ</th><th>Nghĩa tiếng Việt</th></tr>
+                <tr><td class="hz">法律</td><td class="py">fǎlǜ</td><td>dt</td><td>Pháp luật</td></tr>
+                <tr><td class="hz">俩</td><td class="py">liǎ</td><td>sl</td><td>Hai (người)</td></tr>
+                <tr><td class="hz">印象</td><td class="py">yìnxiàng</td><td>dt</td><td>Ấn tượng</td></tr>
+                <tr><td class="hz">熟悉</td><td class="py">shúxī</td><td>dgt</td><td>Hiểu rõ, quen thuộc</td></tr>
+                <tr><td class="hz">不仅</td><td class="py">bùjǐn</td><td>liên</td><td>Không những, không chỉ</td></tr>
+                <tr><td class="hz">性格</td><td class="py">xìnggé</td><td>dt</td><td>Tính cách</td></tr>
+                <tr><td class="hz">从来</td><td class="py">cónglái</td><td>phó</td><td>Từ trước đến nay</td></tr>
+                <tr><td class="hz">适合</td><td class="py">shìhé</td><td>dgt</td><td>Phù hợp</td></tr>
+                <tr><td class="hz">幸福</td><td class="py">xìngfú</td><td>tt</td><td>Hạnh phúc</td></tr>
+                <tr><td class="hz">刚</td><td class="py">gāng</td><td>phó</td><td>Vừa, vừa mới</td></tr>
+                <tr><td class="hz">浪漫</td><td class="py">làngmàn</td><td>tt</td><td>Lãng mạn</td></tr>
+                <tr><td class="hz">缺点</td><td class="py">quēdiǎn</td><td>dt</td><td>Khuyết điểm</td></tr>
+                <tr><td class="hz">接受</td><td class="py">jiēshòu</td><td>dgt</td><td>Chấp nhận</td></tr>
+                <tr><td class="hz">羡慕</td><td class="py">xiànmù</td><td>dgt</td><td>Ngưỡng mộ, ước ao</td></tr>
+                <tr><td class="hz">即使</td><td class="py">jíshǐ</td><td>liên</td><td>Cho dù, dù cho</td></tr>
+                <tr><td class="hz">幽默</td><td class="py">yōumò</td><td>tt</td><td>Hóm hỉnh, hài hước</td></tr>
+            </table>
+
+            <h3>2. Điểm ngữ pháp trọng tâm (语法)</h3>
+            <div class="grammar-card">
+                <h4>① Cấu trúc: 不仅……也/还/而且…… (Không những... mà còn...)</h4>
+                <p>Dùng để bổ sung thêm thông tin. Cùng chủ ngữ thì 不仅 đứng sau chủ ngữ, khác chủ ngữ thì 不仅 đứng trước chủ ngữ.</p>
+                <div class="example">例: 他不仅足球踢得好，性格也不错。(Anh ấy không chỉ đá bóng giỏi mà tính cách cũng tốt.)</div>
+            </div>
+            <div class="grammar-card">
+                <h4>② Phó từ: 从来 (Từ trước đến nay)</h4>
+                <p>Thường dùng trong câu phủ định (从来不 / 从来没) chỉ một thói quen hoặc tính chất không đổi.</p>
+                <div class="example">例: 我从来没这么快乐过。(Tôi chưa bao giờ vui vẻ như thế này từ trước đến nay.)</div>
+            </div>
+            <div class="grammar-card">
+                <h4>③ Cấu trúc: 即使……也…… (Cho dù... cũng...)</h4>
+                <p>Biểu thị quan hệ nhượng bộ giả định.</p>
+                <div class="example">例: 浪漫是即使晚上加班到零点，到家时，自己家里也还亮着灯。(Lãng mạn là dù có tăng ca đến đêm, khi về nhà đèn trong nhà vẫn sáng.)</div>
+            </div>
+
+            <h3>3. Bài tập nâng cao (高级练习)</h3>
+            <div class="quiz-item">
+                <p><b>Bài 1: Chọn từ điền vào chỗ trống:</b> [印象, 熟悉, 羡慕, 即使, 从来]</p>
+                <p>1. 我跟他认识很多年了，对他的性格非常____。</p>
+                <p>2. 他____不迟到，今天怎么还没来？</p>
+                <p>3. ____ công việc có bận đến mấy, anh ấy cũng duy trì tập thể dục (____工作再忙，他也会坚持锻炼)。</p>
+                <button onclick="toggleAnswer('ans1')">Xem đáp án</button>
+                <div id="ans1" class="answer">Đáp án: 1. 熟悉 | 2. 从来 | 3. 即使</div>
+            </div>
+            <div class="quiz-item">
+                <p><b>Bài 2: Sắp xếp từ thành câu hoàn chỉnh:</b></p>
+                <p>1. 踢得 / 他 / 足球 / 不仅 / 好 / 性格 / 也 / 不错</p>
+                <p>2. 接受 / 才能 / 只有 / 对方的缺点 / 更好地 / 在一起 / 生活</p>
+                <button onclick="toggleAnswer('ans2')">Xem đáp án</button>
+                <div id="ans2" class="answer">
+                    Đáp án:<br>
+                    1. 他不仅足球踢得好，性格也不错。<br>
+                    2. 只有接受对方的缺点，才能更好地在一起生活。
+                </div>
+            </div>
+        </div>
+
+        <!-- BÀI 2 -->
+        <div id="lesson-2" class="lesson-section">
+            <h2>第2课：真正的朋友 (Người bạn chân chính)</h2>
+
+            <h3>1. Từ mới (生词)</h3>
+            <table>
+                <tr><th>Hán tự</th><th>Pinyin</th><th>Loại từ</th><th>Nghĩa tiếng Việt</th></tr>
+                <tr><td class="hz">适应</td><td class="py">shìyìng</td><td>dgt</td><td>Thích nghi</td></tr>
+                <tr><td class="hz">交</td><td class="py">jiāo</td><td>dgt</td><td>Kết giao, kết bạn</td></tr>
+                <tr><td class="hz">平时</td><td class="py">píngshí</td><td>dt</td><td>Ngày thường, lúc bình thường</td></tr>
+                <tr><td class="hz">逛</td><td class="py">guàng</td><td>dgt</td><td>Đi dạo, đi chơi</td></tr>
+                <tr><td class="hz">正好</td><td class="py">zhènghǎo</td><td>phó/tt</td><td>Đúng lúc, vừa vặn</td></tr>
+                <tr><td class="hz">聚会</td><td class="py">jùhuì</td><td>dgt/dt</td><td>Gặp gỡ, tụ họp</td></tr>
+                <tr><td class="hz">联系</td><td class="py">liánxì</td><td>dgt</td><td>Liên hệ</td></tr>
+                <tr><td class="hz">差不多</td><td class="py">chàbuduō</td><td>phó/tt</td><td>Suýt soát, xấp xỉ, gần như</td></tr>
+                <tr><td class="hz">专门</td><td class="py">zhuānmén</td><td>phó</td><td>Đặc biệt, riêng biệt</td></tr>
+                <tr><td class="hz">重新</td><td class="py">chóngxīn</td><td>phó</td><td>Làm lại một lần nữa</td></tr>
+                <tr><td class="hz">尽管</td><td class="py">jǐnguǎn</td><td>liên</td><td>Mặc dù, cho dù</td></tr>
+                <tr><td class="hz">真正</td><td class="py">zhēnzhèng</td><td>tt</td><td>Chân chính, đích thực</td></tr>
+                <tr><td class="hz">友谊</td><td class="py">yǒuyì</td><td>dt</td><td>Tình bạn, hữu nghị</td></tr>
+                <tr><td class="hz">丰富</td><td class="py">fēngfù</td><td>dgt/tt</td><td>Làm phong phú, phong phú</td></tr>
+                <tr><td class="hz">无聊</td><td class="py">wúliáo</td><td>tt</td><td>Nhàm chán, vô vị</td></tr>
+                <tr><td class="hz">却</td><td class="py">què</td><td>phó</td><td>Lại, nhưng lại (chuyển ngoặt)</td></tr>
+                <tr><td class="hz">交流</td><td class="py">jiāoliú</td><td>dgt</td><td>Giao lưu, trao đổi</td></tr>
+            </table>
+
+            <h3>2. Điểm ngữ pháp trọng tâm (语法)</h3>
+            <div class="grammar-card">
+                <h4>① Từ: 正好 (Đúng lúc / Vừa vặn)</h4>
+                <p>Tính từ: Vừa vặn số lượng/kích thước. Phó từ: Đúng lúc gặp cơ hội làm việc gì đó.</p>
+                <div class="example">例: 我们下午要去踢足球，正好一起去吧。(Chiều nay tụi mình đi đá bóng, vừa hay cùng đi nhé.)</div>
+            </div>
+            <div class="grammar-card">
+                <h4>② Phân biệt: 差不多 và 几乎</h4>
+                <p><b>差不多:</b> Có thể làm vị ngữ, có thể đứng trước từ chỉ số lượng.<br>
+                <b>几乎:</b> Biểu thị một việc không mong muốn suýt chút nữa đã xảy ra (几乎忘了).</p>
+            </div>
+            <div class="grammar-card">
+                <h4>③ Phó từ biểu thị chuyển ngoặt: 却</h4>
+                <p>Đứng sau chủ ngữ, trước động từ để thể hiện ý quay ngoặt nhẹ nhàng.</p>
+                <div class="example">例: 一个脾气不好的人虽然不一定让人讨厌，但是却很难跟人交朋友。</div>
+            </div>
+
+            <h3>3. Bài tập nâng cao (高级练习)</h3>
+            <div class="quiz-item">
+                <p><b>Bài 1: Phân biệt 差不多 và 几乎 điền vào ô trống:</b></p>
+                <p>1. 这两个人长得____一样。</p>
+                <p>2. 我____忘了咱俩今天 PM 6点有约会。</p>
+                <p>3. 班里的同学我已经联系得____了。</p>
+                <button onclick="toggleAnswer('ans3')">Xem đáp án</button>
+                <div id="ans3" class="answer">Đáp án: 1. 差不多/几乎 | 2. 几乎 (dùng 几乎 cho việc suýt quên) | 3. 差不多</div>
+            </div>
+        </div>
+
+        <!-- BÀI 3 -->
+        <div id="lesson-3" class="lesson-section">
+            <h2>第3课：经理对我印象不错 (Giám đốc có ấn tượng tốt về tôi)</h2>
+
+            <h3>1. Từ mới (生词)</h3>
+            <table>
+                <tr><th>Hán tự</th><th>Pinyin</th><th>Loại từ</th><th>Nghĩa tiếng Việt</th></tr>
+                <tr><td class="hz">挺</td><td class="py">tǐng</td><td>phó</td><td>Rất (挺……的)</td></tr>
+                <tr><td class="hz">紧张</td><td class="py">jǐnzhāng</td><td>tt</td><td>Hồi hộp, căng thẳng</td></tr>
+                <tr><td class="hz">信心</td><td class="py">xìnxīn</td><td>dt</td><td>Lòng tin, tự tin</td></tr>
+                <tr><td class="hz">招聘</td><td class="py">zhāopìn</td><td>dgt</td><td>Tuyển dụng</td></tr>
+                <tr><td class="hz">提供</td><td class="py">tígōng</td><td>dgt</td><td>Cung cấp</td></tr>
+                <tr><td class="hz">负责</td><td class="py">fùzé</td><td>dgt</td><td>Phụ trách, chịu trách nhiệm</td></tr>
+                <tr><td class="hz">本来</td><td class="py">běnlái</td><td>phó</td><td>Vốn dĩ, lúc đầu</td></tr>
+                <tr><td class="hz">应聘</td><td class="py">yìngpìn</td><td>dgt</td><td>Ứng tuyển, xin việc</td></tr>
+                <tr><td class="hz">符合</td><td class="py">fúhé</td><td>dgt</td><td>Phù hợp với (yêu cầu)</td></tr>
+                <tr><td class="hz">另外</td><td class="py">lìngwài</td><td>liên/đt</td><td>Ngoài ra, khác</td></tr>
+                <tr><td class="hz">安排</td><td class="py">ānpái</td><td>dgt</td><td>Sắp xếp</td></tr>
+                <tr><td class="hz">首先……其次……</td><td class="py">shǒuxiān...qícì...</td><td>đt</td><td>Trước tiên... tiếp theo...</td></tr>
+                <tr><td class="hz">准时</td><td class="py">zhǔnshí</td><td>tt</td><td>Đúng giờ</td></tr>
+                <tr><td class="hz">不管</td><td class="py">bùguǎn</td><td>liên</td><td>Bất kể, dù cho</td></tr>
+            </table>
+
+            <h3>2. Điểm ngữ pháp trọng tâm (语法)</h3>
+            <div class="grammar-card">
+                <h4>① Cấu trúc liên kết: 首先……，其次…… (Đầu tiên..., thứ hai...)</h4>
+                <p>Dùng để liệt kê các bước hoặc các lý do theo thứ tự rõ ràng.</p>
+                <div class="example">例: 面试时，首先要穿正式的衣服，其次回答问题不要太快。(Khi phỏng vấn, đầu tiên phải mặc trang phục trang trọng, thứ hai là trả lời không nên quá nhanh.)</div>
+            </div>
+            <div class="grammar-card">
+                <h4>② Phân biệt: 另外 và 另</h4>
+                <p><b>另外:</b> Có thể làm liên từ đứng đầu câu (另外，收入也不错).<br>
+                <b>另:</b> Thường kết hợp dạng "另 + Số lượng + Danh từ" (không có 的).</p>
+            </div>
+
+            <h3>3. Bài tập nâng cao (高级练习)</h3>
+            <div class="quiz-item">
+                <p><b>Bài tập: Viết lại câu dùng 不管……都……</b></p>
+                <p>Đề bài: 无论天气好不好，他每天都坚持跑步。</p>
+                <button onclick="toggleAnswer('ans4')">Xem đáp án</button>
+                <div id="ans4" class="answer">Đáp án: 不管天气好不好，他每天都坚持跑步。</div>
+            </div>
+        </div>
+
+        <!-- BÀI 4 -->
+        <div id="lesson-4" class="lesson-section">
+            <h2>第4课：不要太着急赚钱 (Đừng quá nôn nóng kiếm tiền)</h2>
+
+            <h3>1. Từ mới (生词)</h3>
+            <table>
+                <tr><th>Hán tự</th><th>Pinyin</th><th>Loại từ</th><th>Nghĩa tiếng Việt</th></tr>
+                <tr><td class="hz">以为</td><td class="py">yǐwéi</td><td>dgt</td><td>Tưởng rằng (thực tế không phải)</td></tr>
+                <tr><td class="hz">完全</td><td class="py">wánquán</td><td>phó</td><td>Hoàn toàn</td></tr>
+                <tr><td class="hz">赚</td><td class="py">zhuàn</td><td>dgt</td><td>Kiếm (tiền)</td></tr>
+                <tr><td class="hz">调查</td><td class="py">diàochá</td><td>dgt/dt</td><td>Điều tra, khảo sát</td></tr>
+                <tr><td class="hz">原来</td><td class="py">yuánlái</td><td>tt/phó</td><td>Ban đầu, hóa ra là</td></tr>
+                <tr><td class="hz">计划</td><td class="py">jìhuà</td><td>dt/dgt</td><td>Kế hoạch</td></tr>
+                <tr><td class="hz">提前</td><td class="py">tíqián</td><td>dgt</td><td>Làm trước thời hạn</td></tr>
+                <tr><td class="hz">保证</td><td class="py">bǎozhèng</td><td>dgt</td><td>Đảm bảo, cam đoan</td></tr>
+                <tr><td class="hz">提醒</td><td class="py">tíxǐng</td><td>dgt</td><td>Nhắc nhở</td></tr>
+                <tr><td class="hz">积累</td><td class="py">jīlěi</td><td>dgt</td><td>Tích lũy</td></tr>
+                <tr><td class="hz">经验</td><td class="py">jīngyàn</td><td>dt</td><td>Kinh nghiệm</td></tr>
+                <tr><td class="hz">按照</td><td class="py">ànzhào</td><td>giới</td><td>Căn cứ vào, theo</td></tr>
+                <tr><td class="hz">甚至</td><td class="py">shènzhì</td><td>liên</td><td>Thậm chí</td></tr>
+            </table>
+
+            <h3>2. Điểm ngữ pháp trọng tâm (语法)</h3>
+            <div class="grammar-card">
+                <h4>① Động từ: 以为 (Tưởng là)</h4>
+                <p>Chỉ suy nghĩ của người nói trước đó trái ngược với sự thật khách quan.</p>
+                <div class="example">例: 我以为新工作比以前的好，没想到还没有以前好呢。</div>
+            </div>
+            <div class="grammar-card">
+                <h4>② Phân biệt: 原来 và 本来</h4>
+                <p><b>原来:</b> Có thể chỉ sự phát hiện ra một sự thật trước đây không biết (phát hiện mới: 原来是你！).<br>
+                <b>本来:</b> Thể hiện sự việc đáng lẽ ra phải như vậy (trách nhiệm/định lý).</p>
+            </div>
+
+            <h3>3. Bài tập nâng cao (高级练习)</h3>
+            <div class="quiz-item">
+                <p><b>Bài tập điền từ:</b> [以为, 原来, 按照, 甚至]</p>
+                <p>1. 我们必须____公司的 quy định (规定) 来办事。</p>
+                <p>2. 我____他也是中国人呢，一问才知道他是韩国人。</p>
+                <p>3. 这个难题太难了，____ 连老师都不会做。</p>
+                <button onclick="toggleAnswer('ans5')">Xem đáp án</button>
+                <div id="ans5" class="answer">Đáp án: 1. 按照 | 2. 以为 | 3. 甚至</div>
+            </div>
+        </div>
+
+        <!-- BÀI 5 -->
+        <div id="lesson-5" class="lesson-section">
+            <h2>第5课：只买对的，不买贵的 (Chỉ mua cái đúng, không mua cái đắt)</h2>
+
+            <h3>1. Từ mới (生词)</h3>
+            <table>
+                <tr><th>Hán tự</th><th>Pinyin</th><th>Loại từ</th><th>Nghĩa tiếng Việt</th></tr>
+                <tr><td class="hz">家具</td><td class="py">jiājù</td><td>dt</td><td>Đồ gia dụng, nội thất</td></tr>
+                <tr><td class="hz">打折</td><td class="py">dǎ zhé</td><td>dgt</td><td>Giảm giá</td></tr>
+                <tr><td class="hz">价格</td><td class="py">jiàgé</td><td>dt</td><td>Giá cả</td></tr>
+                <tr><td class="hz">质量</td><td class="py">zhìliàng</td><td>dt</td><td>Chất lượng</td></tr>
+                <tr><td class="hz">肯定</td><td class="py">kěndìng</td><td>phó/tt</td><td>Chắc chắn, nhất định</td></tr>
+                <tr><td class="hz">流行</td><td class="py">liúxíng</td><td>tt/dgt</td><td>Thịnh hành, phổ biến</td></tr>
+                <tr><td class="hz">顺便</td><td class="py">shùnbiàn</td><td>phó</td><td>Nhân tiện, tiện thể</td></tr>
+                <tr><td class="hz">光</td><td class="py">guāng</td><td>phó</td><td>Chỉ, mỗi</td></tr>
+                <tr><td class="hz">实在</td><td class="py">shízài</td><td>phó/tt</td><td>Quả thực, thực sự</td></tr>
+                <tr><td class="hz">邀请</td><td class="py">yāoqǐng</td><td>dgt</td><td>Mời</td></tr>
+                <tr><td class="hz">广告</td><td class="py">guǎnggào</td><td>dt</td><td>Quảng cáo</td></tr>
+                <tr><td class="hz">优点</td><td class="py">yōudiǎn</td><td>dt</td><td>Ưu điểm</td></tr>
+                <tr><td class="hz">实际</td><td class="py">shíjì</td><td>dt/tt</td><td>Thực tế</td></tr>
+            </table>
+
+            <h3>2. Điểm ngữ pháp trọng tâm (语法)</h3>
+            <div class="grammar-card">
+                <h4>① Phó từ: 肯定 (Chắc chắn)</h4>
+                <p>Khẳng định chắc chắn không có hoài nghi.</p>
+                <div class="example">例: 您放心，质量肯定不打折。(Ngài yên tâm, chất lượng chắc chắn không giảm giá.)</div>
+            </div>
+            <div class="grammar-card">
+                <h4>② Từ liên kết: 再说 (Hơn nữa / Để sau hãy nói)</h4>
+                <p>1. Liên từ: Bổ sung thêm lý do mạnh mẽ hơn.<br>
+                2. Động từ: Để sau mới giải quyết (下次再说吧).</p>
+            </div>
+
+            <h3>3. Bài tập nâng cao (高级练习)</h3>
+            <div class="quiz-item">
+                <p><b>Bài tập điền từ:</b> [顺便, 肯定, 实际上, 再说]</p>
+                <p>1. 你去超市买东西的时候，____帮我买一瓶牛奶吧。</p>
+                <p>2. 这件衣服太贵了，____颜色我也不喜欢。</p>
+                <p>3. 很多东西并不像广告上说的那么好，____ 都有缺点。</p>
+                <button onclick="toggleAnswer('ans6')">Xem đáp án</button>
+                <div id="ans6" class="answer">Đáp án: 1. 顺便 | 2. 再说 | 3. 实际上</div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function showLesson(lessonNum) {
+            // Hide all lessons
+            const lessons = document.querySelectorAll('.lesson-section');
+            lessons.forEach(l => l.classList.remove('active'));
+
+            // Deactivate all nav buttons
+            const buttons = document.querySelectorAll('nav button');
+            buttons.forEach(b => b.classList.remove('active'));
+
+            // Show selected lesson and set button active
+            document.getElementById(`lesson-${lessonNum}`).classList.add('active');
+            buttons[lessonNum - 1].classList.add('active');
+        }
+
+        function toggleAnswer(id) {
+            const ansDiv = document.getElementById(id);
+            if (ansDiv.style.display === "block") {
+                ansDiv.style.display = "none";
+            } else {
+                ansDiv.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
