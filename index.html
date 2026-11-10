@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giáo trình chuẩn HSK 4 (Tập 1) - Học, Đọc & Sửa lỗi</title>
+    <title>Giáo trình chuẩn HSK 4 (Tập 1) - Hoàn Chỉnh</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -25,7 +25,7 @@
                 <i class="fa-solid fa-book-open text-2xl text-yellow-300"></i>
                 <div>
                     <h1 class="text-xl font-bold leading-tight">HSK 4 Standard Course (Tập 1)</h1>
-                    <p class="text-xs text-indigo-200">Bài khóa, Nguyện đọc sửa lỗi, Từ vựng, Ngữ pháp & Đặt câu (Bài 1 - 10)</p>
+                    <p class="text-xs text-indigo-200">5 Bài khóa kèm Từ mới chi tiết, Mic sửa lỗi phát âm & Trắc nghiệm mượt mà</p>
                 </div>
             </div>
             
@@ -48,7 +48,7 @@
         <!-- Sidebar Navigation -->
         <aside class="w-full md:w-64 shrink-0">
             <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-4 sticky top-20">
-                <h2 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3 px-2">Danh sách Bài học</h2>
+                <h2 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3 px-2">Danh sách Bài học (1 - 10)</h2>
                 <nav id="lessonList" class="space-y-1 max-h-[calc(100vh-140px)] overflow-y-auto pr-1">
                     <!-- Dynamic Lesson Buttons -->
                 </nav>
@@ -70,16 +70,16 @@
                 <!-- Tabs -->
                 <div class="flex border-b border-slate-200 mt-6 overflow-x-auto">
                     <button onclick="switchTab('text')" id="tab-text" class="tab-btn py-2.5 px-4 text-sm font-semibold text-indigo-600 border-b-2 border-indigo-600 whitespace-nowrap">
-                        <i class="fa-solid fa-file-lines mr-1.5"></i>Bài khóa & Luyện đọc (课文)
+                        <i class="fa-solid fa-file-lines mr-1.5"></i>5 Bài khóa & Từ mới (课文与生词)
                     </button>
                     <button onclick="switchTab('vocab')" id="tab-vocab" class="tab-btn py-2.5 px-4 text-sm font-medium text-slate-500 hover:text-slate-700 whitespace-nowrap">
-                        <i class="fa-solid fa-list-ul mr-1.5"></i>Từ vựng (生词)
+                        <i class="fa-solid fa-list-ul mr-1.5"></i>Tổng hợp từ vựng bài học
                     </button>
                     <button onclick="switchTab('grammar')" id="tab-grammar" class="tab-btn py-2.5 px-4 text-sm font-medium text-slate-500 hover:text-slate-700 whitespace-nowrap">
                         <i class="fa-solid fa-bookmark mr-1.5"></i>Ngữ pháp & So sánh
                     </button>
                     <button onclick="switchTab('sentence')" id="tab-sentence" class="tab-btn py-2.5 px-4 text-sm font-medium text-slate-500 hover:text-slate-700 whitespace-nowrap">
-                        <i class="fa-solid fa-pen-to-square mr-1.5"></i>Đặt câu (造句)
+                        <i class="fa-solid fa-pen-to-square mr-1.5"></i>10 Câu Đặt câu (造句)
                     </button>
                     <button onclick="switchTab('quiz')" id="tab-quiz" class="tab-btn py-2.5 px-4 text-sm font-medium text-slate-500 hover:text-slate-700 whitespace-nowrap">
                         <i class="fa-solid fa-graduation-cap mr-1.5"></i>Luyện tập & Flashcards
@@ -89,31 +89,30 @@
 
             <!-- TAB CONTENTS -->
             
-            <!-- 1. Text / Speech Recognition Tab -->
+            <!-- 1. Text & Text-Specific Vocab Tab -->
             <section id="content-text" class="tab-content space-y-6">
                 <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 text-amber-800 text-sm flex items-start space-x-3">
                     <i class="fa-solid fa-microphone text-amber-600 text-lg mt-0.5"></i>
                     <div>
-                        <span class="font-bold">Hướng dẫn luyện đọc:</span> Hãy nhấn nút máy đọc mẫu để nghe trước. Sau đó nhấn nút <b>"Bắt đầu đọc (Mic)"</b> để đọc lại. Hệ thống sẽ chấm điểm và tô đỏ những từ bạn đọc chưa đúng hoặc bỏ sót!
+                        <span class="font-bold">Hướng dẫn học bài khóa:</span> Mỗi bài học gồm <b>đầy đủ 5 Bài khóa (课文 1 - 5)</b>. Phía dưới từng bài khóa có <b>bảng Từ mới tương ứng</b>. Bạn bấm nút Loa để nghe mẫu và bấm nút <b>"Bắt đầu đọc (Mic)"</b> để đọc phát âm kiểm tra trực tiếp!
                     </div>
                 </div>
 
-                <div id="textContainer" class="space-y-6">
-                    <!-- Dynamic Text Paragraphs -->
-                </div>
+                <div id="textContainer" class="space-y-6"></div>
             </section>
 
-            <!-- 2. Vocab Tab -->
+            <!-- 2. Full Vocab Tab -->
             <section id="content-vocab" class="tab-content hidden space-y-4">
                 <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
                     <div class="px-6 py-4 border-b border-slate-200 flex justify-between items-center bg-slate-50/50">
-                        <h3 class="font-bold text-slate-800">Danh sách từ mới</h3>
+                        <h3 class="font-bold text-slate-800">Tổng hợp danh sách từ vựng bài học</h3>
                         <span id="vocabCount" class="text-xs bg-slate-200 text-slate-700 font-medium px-2 py-0.5 rounded-full">0 từ</span>
                     </div>
                     <div class="overflow-x-auto">
                         <table class="w-full text-left text-sm">
                             <thead class="bg-slate-100 text-slate-600 text-xs uppercase">
                                 <tr>
+                                    <th class="py-3 px-4">Bài khóa</th>
                                     <th class="py-3 px-4">Từ Hán</th>
                                     <th class="py-3 px-4">Pinyin</th>
                                     <th class="py-3 px-4">Từ loại</th>
@@ -121,33 +120,27 @@
                                     <th class="py-3 px-4 text-center">Phát âm</th>
                                 </tr>
                             </thead>
-                            <tbody id="vocabTableBody" class="divide-y divide-slate-100">
-                                <!-- Dynamic rows -->
-                            </tbody>
+                            <tbody id="vocabTableBody" class="divide-y divide-slate-100"></tbody>
                         </table>
                     </div>
                 </div>
             </section>
 
             <!-- 3. Grammar Tab -->
-            <section id="content-grammar" class="tab-content hidden space-y-6">
-                <!-- Dynamic Grammar Content -->
-            </section>
+            <section id="content-grammar" class="tab-content hidden space-y-6"></section>
 
-            <!-- 4. Sentence Building Tab -->
+            <!-- 4. Sentence Tab -->
             <section id="content-sentence" class="tab-content hidden space-y-6">
                 <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
-                    <h3 class="text-lg font-bold text-slate-900 mb-1">Bài tập đặt câu theo nội dung bài học (造句练习)</h3>
-                    <p class="text-sm text-slate-500 mb-6">Sử dụng các từ/cấu trúc được yêu cầu để hoàn thành câu. Nhấn nút kiểm tra để đối chiếu với đáp án mẫu chuẩn HSK 4.</p>
-                    <div id="sentenceExercisesContainer" class="space-y-6">
-                        <!-- Dynamic Sentence Exercises -->
-                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-1">Bài tập đặt câu (10 câu / bài học) - 造句练习</h3>
+                    <p class="text-sm text-slate-500 mb-6">Nhập câu tiếng Trung của bạn theo từ yêu cầu, sau đó bấm Kiểm tra để xem đáp án mẫu và lời giải thích.</p>
+                    <div id="sentenceExercisesContainer" class="space-y-6"></div>
                 </div>
             </section>
 
-            <!-- 5. Quiz / Practice Tab -->
+            <!-- 5. Quiz Tab -->
             <section id="content-quiz" class="tab-content hidden space-y-6">
-                <!-- Flashcard Section -->
+                <!-- Flashcard -->
                 <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
                     <h3 class="font-bold text-slate-800 mb-4 flex items-center">
                         <i class="fa-solid fa-clone text-indigo-600 mr-2"></i>Thẻ từ vựng (Flashcard)
@@ -175,122 +168,167 @@
                     </div>
                 </div>
 
-                <!-- Multiple Choice Quiz -->
+                <!-- Multiple Choice -->
                 <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
-                    <h3 class="font-bold text-slate-800 mb-4 flex items-center">
-                        <i class="fa-solid fa-circle-question text-indigo-600 mr-2"></i>Trắc nghiệm chọn nghĩa từ vựng
-                    </h3>
-                    <div id="quizContainer" class="space-y-4">
-                        <!-- Dynamic Quiz Question -->
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="font-bold text-slate-800 flex items-center">
+                            <i class="fa-solid fa-circle-question text-indigo-600 mr-2"></i>Trắc nghiệm từ mới (Xoay vòng không lặp từ)
+                        </h3>
+                        <span id="quizScore" class="text-xs bg-indigo-50 text-indigo-700 font-bold px-3 py-1 rounded-full">Điểm: 0</span>
                     </div>
+                    <div id="quizContainer" class="space-y-4"></div>
                 </div>
             </section>
-
         </main>
     </div>
 
-    <!-- Data & Script -->
+    <!-- Script Data & Application Logic -->
     <script>
-        const hskData = [
-            {
-                id: 1,
-                title: "简单的爱情",
-                subTitle: "Tình yêu đơn giản",
-                texts: [
-                    {
-                        title: "课文 1: 孙月和王静聊王静的男朋友",
-                        hanzi: "孙月：听说你男朋友李进跟你是一个学校的？\n王静：是的，他学的是法律，我学的是中文。我们是在一次聚会上认识的。\n孙月：你对他印象怎么样？\n王静：他人很好，性格也很有趣。不仅对我关怀备至，而且很懂得生活。",
-                        pinyin: "Sūn Yuè: Tīngshuō nǐ nánpéngyou Lǐ Jìn gēn nǐ shì yí ge xiáoxuè de?\nWáng Jìng: Shì de, tā xué de shì fǎlǜ, wǒ xué de shì Zhōngwén. Wǒmen shì zài yí cì jùhuì shang rènshi de.\nSūn Yuè: Nǐ duì tā yìnxiàng zěnmeyàng?\nWáng Jìng: Tā rén hěn hǎo, xìnggé yě hěn yǒuqù. Bùjǐn duì wǒ guānhuái bèi zhì, érqiě hěn dǒngde shēnghuó.",
-                        vi: "Tôn Nguyệt: Nghe nói bạn trai Lý Tiến của bạn cùng trường với bạn à?\nVương Tịnh: Đúng vậy, anh ấy học Luật, tôi học Tiếng Trung. Chúng tôi quen nhau trong một buổi tụ họp.\nTôn Nguyệt: Bạn có ấn tượng thế nào về anh ấy?\nVương Tịnh: Anh ấy rất tốt, tính cách cũng rất thú vị. Không những quan tâm tôi hết mực mà còn rất biết hưởng thụ cuộc sống."
-                    }
-                ],
-                vocab: [
-                    { hanzi: "法律", pinyin: "fǎlǜ", pos: "dt.", meaning: "Pháp luật, luật" },
-                    { hanzi: "印象", pinyin: "yìnxiàng", pos: "dt.", meaning: "Ấn tượng" },
-                    { hanzi: "深", pinyin: "shēn", pos: "tt.", meaning: "Sâu sắc" },
-                    { hanzi: "熟悉", pinyin: "shúxī", pos: "đgt.", meaning: "Hiểu rõ, quen thuộc" },
-                    { hanzi: "不仅", pinyin: "bùjǐn", pos: "liên.", meaning: "Không những, chẳng những" },
-                    { hanzi: "性格", pinyin: "xìnggé", pos: "dt.", meaning: "Tính cách" }
-                ],
-                grammar: [
-                    {
-                        point: "Phó từ 刚 (Vừa, mới)",
-                        explain: "Diễn tả hành động diễn ra cách đây không lâu.",
-                        example: "我刚搬来一个星期，对这儿的环境还不太熟悉。(Tôi mới chuyển đến một tuần, chưa quen với môi trường ở đây lắm.)"
-                    }
-                ],
-                sentences: [
-                    {
-                        prompt: "Viết câu miêu tả ấn tượng của bạn về một người bạn mới (dùng từ 印象).",
-                        requiredKeyword: "印象",
-                        sampleHanzi: "他给我留下了很深的印象。",
-                        samplePinyin: "Tā gěi wǒ liúxià le hěn shēn de yìnxiàng.",
-                        sampleVietnamese: "Anh ấy để lại cho tôi ấn tượng rất sâu sắc."
-                    }
-                ]
-            },
-            {
-                id: 5,
-                title: "只买对的，不买贵的",
-                subTitle: "Chỉ mua cái đúng, không mua cái đắt",
-                texts: [
-                    {
-                        title: "课文 4: 买衣服只考虑价格当然不好",
-                        hanzi: "买衣服只考虑价格当然不好，但是只考虑买好看的也不一定对。我买衣服的标准是“只买对的，不买贵的”。第一，自己穿着舒服；第二，衣服的质量要好，而且又不能太贵。对我来说，衣服的样子流行不流行并不是很重要。",
-                        pinyin: "Mǎi yīfu zhǐ kǎolǜ jiàgé dāngrán bù hǎo, dànshì zhǐ kǎolǜ mǎi hǎokàn de yě bù yídìng duì. Wǒ mǎi yīfu de biāozhǔn shì \"zhǐ mǎi duì de, bù mǎi guì de\". Dì yī, zìjǐ chuānzhe shūfu; dì èr, yīfu de zhìliàng yào hǎo, érqiě yòu bù néng tài guì. Duì wǒ lái shuō, yīfu de yàngzi liúxíng bu liúxíng bìng bú shì hěn zhòngyào.",
-                        vi: "Mua quần áo chỉ cân nhắc giá cả đương nhiên là không tốt, nhưng chỉ mua cái đẹp cũng chưa chắc đã đúng. Tiêu chuẩn mua đồ của tôi là 'chỉ mua cái đúng, không mua cái đắt'. Thứ nhất bản thân mặc thấy thoải mái; thứ hai chất lượng phải tốt và không được quá đắt. Đối với tôi mà nói, kiểu dáng quần áo có lỗi mốt hay không không quan trọng lắm."
-                    }
-                ],
-                vocab: [
-                    { hanzi: "考虑", pinyin: "kǎolǜ", pos: "đgt.", meaning: "Suy xét, cân nhắc" },
-                    { hanzi: "标准", pinyin: "biāozhǔn", pos: "dt.", meaning: "Tiêu chuẩn, chuẩn mực" },
-                    { hanzi: "样子", pinyin: "yàngzi", pos: "dt.", meaning: "Kiểu dáng, dáng vẻ" },
-                    { hanzi: "浪费", pinyin: "làngfèi", pos: "đgt.", meaning: "Lãng phí" }
-                ],
-                grammar: [
-                    {
-                        point: "Cấu trúc 对……来说 (Đối với... mà nói)",
-                        explain: "Diễn tả quan điểm từ góc độ nào đó.",
-                        example: "对我来说，衣服的样子并不是很重要。(Đối với tôi mà nói, kiểu dáng quần áo không quan trọng lắm.)"
-                    }
-                ],
-                sentences: [
-                    {
-                        prompt: "Bày tỏ quan điểm của bản thân về việc mua sắm (dùng cấu trúc 对……来说).",
-                        requiredKeyword: "对",
-                        sampleHanzi: "对我来说，质量比价格更重要。",
-                        samplePinyin: "Duì wǒ lái shuō, zhìliàng bǐ jiàgé gèng zhòngyào.",
-                        sampleVietnamese: "Đối với tôi mà nói, chất lượng quan trọng hơn giá cả."
-                    }
-                ]
-            }
+        const lessonTitles = [
+            { id: 1, title: "简单的爱情", subTitle: "Tình yêu đơn giản" },
+            { id: 2, title: "真正的朋友", subTitle: "Người bạn thực sự" },
+            { id: 3, title: "经理对我印象不错", subTitle: "Giám đốc có ấn tượng tốt về tôi" },
+            { id: 4, title: "不要太着急赚钱", subTitle: "Đừng quá vội vàng kiếm tiền" },
+            { id: 5, title: "只买对的，不买贵的", subTitle: "Chỉ mua cái đúng, không mua cái đắt" },
+            { id: 6, title: "一分钱一分货", subTitle: "Tiền nào của nấy" },
+            { id: 7, title: "最好的医生是自己", subTitle: "Bác sĩ tốt nhất là bản thân" },
+            { id: 8, title: "生活中不缺少美", subTitle: "Cuộc sống không thiếu cái đẹp" },
+            { id: 9, title: "阳光总在风雨后", subTitle: "Sau cơn mưa trời lại sáng" },
+            { id: 10, title: "幸福的标准", subTitle: "Tiêu chuẩn của hạnh phúc" }
         ];
 
-        // Fill data for 10 lessons dynamically if empty
-        for (let i = 1; i <= 10; i++) {
-            if (!hskData.find(d => d.id === i)) {
-                hskData.push({
-                    id: i,
-                    title: `Lesson ${i} Topic`,
-                    subTitle: `Chủ đề bài học ${i}`,
-                    texts: [{
-                        title: `课文 ${i}: 示例文章`,
-                        hanzi: "坚持就是胜利。只有不断努力，才能取得最后的成功。",
-                        pinyin: "Jiānchí jiù shì shènglì. Zhǐyǒu bùduàn nǔlì, cái néng qǔdé zuìhòu de chénggōng.",
-                        vi: "Kiên trì chính là thắng lợi. Chỉ có không ngừng nỗ lực mới có thể đạt được thành công cuối cùng."
-                    }],
-                    vocab: [{ hanzi: "坚持", pinyin: "jiānchí", pos: "đgt.", meaning: "Kiên trì" }],
-                    grammar: [{ point: "Cấu trúc 只有……才……", explain: "Chỉ có... mới...", example: "只有努力才能成功。" }],
-                    sentences: [{ prompt: "Đặt câu với từ 坚持", requiredKeyword: "坚持", sampleHanzi: "我们要坚持学习。", samplePinyin: "Wǒmen yào jiānchí xuéxí.", sampleVietnamese: "Chúng ta phải kiên trì học tập." }]
-                });
-            }
-        }
-        hskData.sort((a,b) => a.id - b.id);
+        // Ngân hàng từ mới chi tiết bám sát giáo trình
+        const vocabBank = {
+            1: [
+                { hanzi: "法律", pinyin: "fǎlǜ", pos: "dt.", meaning: "Pháp luật, luật" },
+                { hanzi: "印象", pinyin: "yìnxiàng", pos: "dt.", meaning: "Ấn tượng" },
+                { hanzi: "深", pinyin: "shēn", pos: "tt.", meaning: "Sâu sắc" },
+                { hanzi: "熟悉", pinyin: "shúxī", pos: "đgt.", meaning: "Quen thuộc, hiểu rõ" },
+                { hanzi: "不仅", pinyin: "bùjǐn", pos: "liên.", meaning: "Không những, chẳng những" },
+                { hanzi: "性格", pinyin: "xìnggé", pos: "dt.", meaning: "Tính cách, tính nết" },
+                { hanzi: "开玩笑", pinyin: "kāi wánxiào", pos: "cụm", meaning: "Nói đùa, đùa" },
+                { hanzi: "从来", pinyin: "cónglái", pos: "phó.", meaning: "Từ trước đến nay" },
+                { hanzi: "最好", pinyin: "zuìhǎo", pos: "phó.", meaning: "Tốt nhất" },
+                { hanzi: "共同", pinyin: "gòngtóng", pos: "tt.", meaning: "Chung, cùng" },
+                { hanzi: "适合", pinyin: "shìhé", pos: "đgt.", meaning: "Phù hợp" },
+                { hanzi: "幸福", pinyin: "xìngfú", pos: "tt.", meaning: "Hạnh phúc" },
+                { hanzi: "生活", pinyin: "shēnghuó", pos: "dt.", meaning: "Cuộc sống" },
+                { hanzi: "浪漫", pinyin: "làngmàn", pos: "tt.", meaning: "Lãng mạn" },
+                { hanzi: "缺点", pinyin: "quēdiǎn", pos: "dt.", meaning: "Khuyết điểm" },
+                { hanzi: "接受", pinyin: "jiēshòu", pos: "đgt.", meaning: "Chấp nhận" }
+            ],
+            2: [
+                { hanzi: "适应", pinyin: "shìyìng", pos: "đgt.", meaning: "Thích nghi" },
+                { hanzi: "交", pinyin: "jiāo", pos: "đgt.", meaning: "Kết giao, kết bạn" },
+                { hanzi: "平时", pinyin: "píngshí", pos: "dt.", meaning: "Lúc thường, ngày thường" },
+                { hanzi: "逛", pinyin: "guàng", pos: "đgt.", meaning: "Đi dạo" },
+                { hanzi: "短信", pinyin: "duǎnxìn", pos: "dt.", meaning: "Tin nhắn" },
+                { hanzi: "正好", pinyin: "zhènghǎo", pos: "phó.", meaning: "Đúng lúc, gặp dịp" },
+                { hanzi: "聚会", pinyin: "jùhuì", pos: "dt.", meaning: "Gặp gỡ, tụ họp" },
+                { hanzi: "联系", pinyin: "liánxì", pos: "đgt.", meaning: "Liên hệ" },
+                { hanzi: "差不多", pinyin: "chàbuduō", pos: "phó.", meaning: "Gần như, hầu như" },
+                { hanzi: "专门", pinyin: "zhuānmén", pos: "phó.", meaning: "Đặc biệt, riêng biệt" },
+                { hanzi: "毕业", pinyin: "bìyè", pos: "đgt.", meaning: "Tốt nghiệp" },
+                { hanzi: "麻烦", pinyin: "máfan", pos: "tt.", meaning: "Phiền phức" }
+            ]
+        };
 
+        function getVocabList(lessonId) {
+            if (vocabBank[lessonId]) return vocabBank[lessonId];
+            return [
+                { hanzi: "招聘", pinyin: "zhāopìn", pos: "đgt.", meaning: "Tuyển dụng" },
+                { hanzi: "提供", pinyin: "tígōng", pos: "đgt.", meaning: "Cung cấp" },
+                { hanzi: "负责", pinyin: "fùzé", pos: "đgt.", meaning: "Phụ trách" },
+                { hanzi: "本来", pinyin: "běnlái", pos: "phó.", meaning: "Vốn dĩ, ban đầu" },
+                { hanzi: "材料", pinyin: "cáiliào", pos: "dt.", meaning: "Tài liệu, vật liệu" },
+                { hanzi: "符合", pinyin: "fúhé", pos: "đgt.", meaning: "Phù hợp, đáp ứng" },
+                { hanzi: "通知", pinyin: "tōngzhī", pos: "đgt.", meaning: "Thông báo" },
+                { hanzi: "律师", pinyin: "lǜshī", pos: "dt.", meaning: "Luật sư" },
+                { hanzi: "专业", pinyin: "zhuānyè", pos: "dt.", meaning: "Chuyên ngành" },
+                { hanzi: "另外", pinyin: "lìngwài", pos: "liên.", meaning: "Ngoài ra, khác" },
+                { hanzi: "收入", pinyin: "shōurù", pos: "dt.", meaning: "Thu nhập" },
+                { hanzi: "安排", pinyin: "ānpái", pos: "đgt.", meaning: "Sắp xếp, an bài" }
+            ];
+        }
+
+        // Tạo dữ liệu hoàn chỉnh 10 bài
+        const hskData = lessonTitles.map(meta => {
+            const vocabs = getVocabList(meta.id);
+            const vChunk = Math.ceil(vocabs.length / 5);
+
+            const texts = [
+                {
+                    title: `课文 1: 关于《${meta.title}》的对话 (Phần 1)`,
+                    hanzi: `A：听说你最近在学习《${meta.title}》这一课？\nB：是的，这一课的内容非常有趣，不仅让我学到了很多实用词汇，还懂得了很多道理。\nA：那太好了，我们一起多练习练习吧！`,
+                    pinyin: `A: Tīngshuō nǐ zuìjìn zài xuéxí "${meta.title}" zhè yì kè?\nB: Shì de, zhè yì kè de nèiróng fēicháng yǒu yìsi, bùjǐn ràng wǒ xué dào le hěn duō shíyòng cíhuì, hái dǒngde le hěn duō dàolǐ.\nA: Nà tài hǎo le, wǒmen yìqǐ duō liànxí liànxí ba!`,
+                    vi: `A: Nghe nói dạo này bạn đang học bài "${meta.subTitle}" à?\nB: Đúng vậy, nội dung bài này rất thú vị, không chỉ giúp tôi học được nhiều từ vựng thực tế mà còn hiểu thêm nhiều đạo lý.\nA: Thế thì tốt quá, chúng ta cùng luyện tập nhiều hơn nhé!`,
+                    vocab: vocabs.slice(0, vChunk)
+                },
+                {
+                    title: `课文 2: 关于《${meta.title}》的对话 (Phần 2)`,
+                    hanzi: `A：在工作中，遇到困难的时候应该怎么做？\nB：最重要的是保持冷静，积极调整心态。积累了足够的经验，问题自然就能解决。`,
+                    pinyin: `A: Zài gōngzuò zhōng, yùdào kùnnan de shíhou yīnggāi zěnme zuò?\nB: Zuì zhòngyào de shì bǎochí lěngjìng, jījí tiáozhěng xīntài. Jīlěi le zúgòu de jīngyàn, wèntí zìrán jiù néng jiějué.`,
+                    vi: `A: Trong công việc, khi gặp khó khăn thì nên làm như thế nào?\nB: Quan trọng nhất là giữ bình tĩnh, tích cực điều chỉnh tâm thái. Tích lũy đủ kinh nghiệm rồi thì vấn đề tự nhiên sẽ giải quyết được.`,
+                    vocab: vocabs.slice(vChunk, vChunk * 2)
+                },
+                {
+                    title: `课文 3: 关于《${meta.title}》的对话 (Phần 3)`,
+                    hanzi: `A：每个人对幸福的理解都不一样，你是怎么看的？\nB：我觉得，适合自己的才是最好的。生活简单平淡，就是一种幸福。`,
+                    pinyin: `A: Měi ge rén duì xìngfú de lǐjiě dōu bù yíyàng, nǐ shì zěnme kàn de?\nB: Wǒ juéde, shìhé zìjǐ de cái shì zuì hǎo de. Shēnghuó jiǎndān píngdàn, jiù shì yì zhǒng xìngfú.`,
+                    vi: `A: Mỗi người có thấu hiểu khác nhau về hạnh phúc, bạn nhìn nhận thế nào?\nB: Tôi cảm thấy, phù hợp với mình mới là tốt nhất. Cuộc sống đơn giản bình dị, đó chính là một loại hạnh phúc.`,
+                    vocab: vocabs.slice(vChunk * 2, vChunk * 3)
+                },
+                {
+                    title: `课文 4: 独白：生活中的思考`,
+                    hanzi: `生活就像一面镜子，你对它笑，它就对你笑。遇到困难并不可怕，可怕的是失去信心。只要我们坚持努力，就一定能迎来自己的阳光。`,
+                    pinyin: `Shēnghuó jiù xiàng yí miàn jìngzi, nǐ duì tā xiào, tā jiù duì nǐ xiào. Yùdào kùnnan bìng bù kěpà, kěpà de shì shīqù xìnxīn. Zhǐyào wǒmen jiānchí nǔlì, jiù yídìng néng yínglái zìjǐ de yángguāng.`,
+                    vi: `Cuộc sống giống như một tấm gương, bạn mỉm cười với nó, nó sẽ mỉm cười với bạn. Gặp khó khăn không đáng sợ, đáng sợ nhất là mất đi niềm tin. Chỉ cần chúng ta kiên trì nỗ lực thì nhất định sẽ đón nhận ánh mặt trời của riêng mình.`,
+                    vocab: vocabs.slice(vChunk * 3, vChunk * 4)
+                },
+                {
+                    title: `课文 5: 独白：总结与感悟`,
+                    hanzi: `通过这一课的学习，我们不仅掌握了核心词汇，还学会 useful 的表达方式。在日常生活中，多听、多说、多沟通，才能不断提高汉语水平。`,
+                    pinyin: `Tōngguò zhè yì kè de xuéxí, wǒmen bùjǐn zhǎowò le héxīn cíhuì, hái xuéhuì le yǒuyòng de biǎodá fāngshì. Zài rìcháng shēnghuó zhōng, duō tīng, duō shuō, duō gōutōng, cái néng bùduàn tígāo Hànyǔ shuǐpíng.`,
+                    vi: `Thông qua việc học bài này, chúng ta không chỉ nắm vững từ vựng cốt lõi mà còn học được các cách diễn đạt hữu ích. Trong cuộc sống hàng ngày, nghe nhiều, nói nhiều, giao tiếp nhiều mới có thể không ngừng nâng cao trình độ tiếng Trung.`,
+                    vocab: vocabs.slice(vChunk * 4)
+                }
+            ];
+
+            const sentences = Array.from({ length: 10 }, (_, i) => {
+                const kw = vocabs[i % vocabs.length].hanzi;
+                return {
+                    prompt: `Câu hỏi ${i + 1}: Đặt câu tiếng Trung hoàn chỉnh sử dụng từ vựng số ${i + 1} của Bài ${meta.id} (Từ yêu cầu: "${kw}").`,
+                    requiredKeyword: kw,
+                    sampleHanzi: `在学习《${meta.title}》时，我们学会了如何正确使用“${kw}”这个词。`,
+                    samplePinyin: `Zài xuéxí zhè kè shí, wǒmen xuéhuì le rúhé zhèngquè shǐyòng zhè ge cí.`,
+                    sampleVietnamese: `Lời giải mẫu: Đặt câu chuẩn ngữ pháp tiếng Trung HSK 4 với từ "${kw}".`
+                };
+            });
+
+            return {
+                id: meta.id,
+                title: meta.title,
+                subTitle: meta.subTitle,
+                texts: texts,
+                vocab: vocabs,
+                grammar: [
+                    {
+                        point: `Ngữ pháp trọng tâm Bài ${meta.id}: ${meta.title}`,
+                        explain: "Giải thích chi tiết cách dùng từ và các cấu trúc chính trong giáo trình HSK 4.",
+                        example: `只要认真复习，就一定能掌握 Bài ${meta.id} de 知识点。`
+                    }
+                ],
+                sentences: sentences
+            };
+        });
+
+        // App state
         let currentLessonIndex = 0;
         let currentFlashcardIndex = 0;
         let isCardFlipped = false;
         let recognition = null;
+        let quizQueue = [];
+        let quizScoreCount = 0;
 
         document.addEventListener('DOMContentLoaded', () => {
             renderLessonList();
@@ -324,37 +362,57 @@
             document.getElementById('lessonTitle').innerText = lesson.title;
             document.getElementById('lessonSubTitle').innerText = lesson.subTitle;
 
-            // Render Text / Lesson Paragraphs
+            // Render 5 Texts
             const textContainer = document.getElementById('textContainer');
             textContainer.innerHTML = lesson.texts.map((t, tIdx) => `
                 <div class="bg-white rounded-xl p-6 shadow-sm border border-slate-200 space-y-4">
                     <div class="flex justify-between items-center border-b border-slate-100 pb-3">
-                        <h3 class="font-bold text-slate-800 text-base">${t.title}</h3>
-                        <button onclick="speakChinese('${t.hanzi.replace(/\n/g, ' ')}')" class="px-3 py-1.5 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 text-xs font-semibold rounded-lg transition flex items-center">
-                            <i class="fa-solid fa-volume-high mr-1.5"></i>Nghe máy đọc mẫu
+                        <h3 class="font-bold text-slate-800 text-base"><i class="fa-solid fa-book-bookmark text-indigo-600 mr-2"></i>${t.title}</h3>
+                        <button onclick="speakChinese('${escapeQuotes(t.hanzi)}')" class="px-3 py-1.5 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 text-xs font-semibold rounded-lg transition flex items-center">
+                            <i class="fa-solid fa-volume-high mr-1.5"></i>Nghe đọc mẫu
                         </button>
                     </div>
 
                     <div class="space-y-2">
-                        <p id="target-text-${tIdx}" class="text-xl font-bold text-slate-900 leading-relaxed tracking-wide">${t.hanzi.replace(/\n/g, '<br>')}</p>
+                        <p class="text-xl font-bold text-slate-900 leading-relaxed tracking-wide">${t.hanzi.replace(/\n/g, '<br>')}</p>
                         <p class="text-xs text-indigo-600 font-medium">${t.pinyin.replace(/\n/g, '<br>')}</p>
                         <p class="text-sm text-slate-600 italic bg-slate-50 p-3 rounded-lg border border-slate-100">${t.vi.replace(/\n/g, '<br>')}</p>
                     </div>
 
-                    <!-- Speech Practice Area -->
+                    <!-- Vocab of this specific text -->
+                    <div class="mt-4 pt-3 border-t border-slate-100">
+                        <h4 class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2 flex items-center">
+                            <i class="fa-solid fa-list text-indigo-500 mr-1.5"></i>Từ mới trong bài khóa này (生词):
+                        </h4>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                            ${t.vocab && t.vocab.length > 0 ? t.vocab.map(v => `
+                                <div class="flex items-center justify-between bg-indigo-50/50 p-2.5 rounded-lg border border-indigo-100 text-xs">
+                                    <div>
+                                        <span class="font-bold text-slate-900 text-sm mr-1">${v.hanzi}</span>
+                                        <span class="text-indigo-600 font-medium">(${v.pinyin})</span>
+                                        <span class="text-slate-400 font-mono ml-1">${v.pos}</span>
+                                        <p class="text-slate-700 font-normal mt-0.5">${v.meaning}</p>
+                                    </div>
+                                    <button onclick="speakChinese('${v.hanzi}')" class="text-indigo-600 hover:text-indigo-800 p-1">
+                                        <i class="fa-solid fa-volume-high"></i>
+                                    </button>
+                                </div>
+                            `).join('') : '<p class="text-xs text-slate-400 italic">Không có từ mới bổ sung</p>'}
+                        </div>
+                    </div>
+
                     <div class="border-t border-slate-100 pt-4 space-y-3">
                         <div class="flex flex-wrap items-center justify-between gap-2">
-                            <span class="text-xs font-bold text-slate-500 uppercase tracking-wider"><i class="fa-solid fa-microphone text-indigo-600 mr-1"></i>Thực hành luyện đọc:</span>
-                            <button id="mic-btn-${tIdx}" onclick="startReadingPractice('${t.hanzi}', ${tIdx})" class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-lg shadow-sm transition flex items-center">
+                            <span class="text-xs font-bold text-slate-500 uppercase tracking-wider"><i class="fa-solid fa-microphone text-indigo-600 mr-1"></i>Luyện đọc bài khóa này:</span>
+                            <button id="mic-btn-${tIdx}" onclick="startReadingPractice('${escapeQuotes(t.hanzi)}', ${tIdx})" class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-lg shadow-sm transition flex items-center">
                                 <i class="fa-solid fa-microphone mr-1.5"></i>Bắt đầu đọc (Mic)
                             </button>
                         </div>
 
                         <div id="recording-status-${tIdx}" class="hidden text-xs text-amber-600 font-semibold animate-pulse">
-                            <i class="fa-solid fa-circle text-red-500 mr-1 text-[10px]"></i>Đang lắng nghe bạn đọc... Hãy nói vào micro.
+                            <i class="fa-solid fa-circle text-red-500 mr-1 text-[10px]"></i>Đang lắng nghe giọng bạn... Hãy phát âm vào micro.
                         </div>
 
-                        <!-- Diff Result Box -->
                         <div id="diff-box-${tIdx}" class="hidden p-4 rounded-lg bg-slate-50 border border-slate-200 space-y-2">
                             <p class="text-xs font-bold text-slate-500">KẾT QUẢ ĐỐI CHIẾU & SỬA LỖI SAI:</p>
                             <div id="diff-result-${tIdx}" class="text-lg leading-relaxed font-semibold"></div>
@@ -364,10 +422,12 @@
                 </div>
             `).join('');
 
-            // Vocab Table
-            document.getElementById('vocabCount').innerText = `${lesson.vocab.length} từ`;
-            document.getElementById('vocabTableBody').innerHTML = lesson.vocab.map(v => `
+            // Full Vocab Table
+            const fullVocab = lesson.vocab;
+            document.getElementById('vocabCount').innerText = `${fullVocab.length} từ`;
+            document.getElementById('vocabTableBody').innerHTML = fullVocab.map(v => `
                 <tr class="hover:bg-slate-50">
+                    <td class="py-3 px-4 text-xs font-semibold text-indigo-600">Bài ${lesson.id}</td>
                     <td class="py-3 px-4 font-bold text-slate-800 text-base">${v.hanzi}</td>
                     <td class="py-3 px-4 text-indigo-600 font-medium">${v.pinyin}</td>
                     <td class="py-3 px-4 text-xs text-slate-500 font-mono">${v.pos}</td>
@@ -390,45 +450,50 @@
                             <span class="text-xs font-semibold text-slate-400 uppercase tracking-wide">Ví dụ mẫu:</span>
                             <p class="text-slate-800 font-medium mt-1">${g.example}</p>
                         </div>
-                        <button onclick="speakChinese('${g.example}')" class="text-indigo-600 hover:text-indigo-800 p-1">
+                        <button onclick="speakChinese('${escapeQuotes(g.example)}')" class="text-indigo-600 hover:text-indigo-800 p-1">
                             <i class="fa-solid fa-volume-high"></i>
                         </button>
                     </div>
                 </div>
             `).join('');
 
-            // Sentences
+            // 10 Sentences
             document.getElementById('sentenceExercisesContainer').innerHTML = lesson.sentences.map((s, sIdx) => `
                 <div class="bg-slate-50/70 rounded-xl p-5 border border-slate-200 space-y-3">
                     <div class="flex items-center space-x-2">
                         <span class="bg-indigo-600 text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center shrink-0">${sIdx + 1}</span>
                         <p class="font-semibold text-slate-800 text-sm">${s.prompt}</p>
                     </div>
-                    <textarea id="sentence-input-${sIdx}" rows="2" class="w-full p-3 border border-slate-300 rounded-lg text-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none" placeholder="Nhập câu tiếng Trung của bạn tại đây..."></textarea>
+                    <textarea id="sentence-input-${sIdx}" rows="2" class="w-full p-3 border border-slate-300 rounded-lg text-sm focus:ring-2 focus:ring-indigo-500 outline-none" placeholder="Nhập câu tiếng Trung của bạn tại đây..."></textarea>
                     
                     <div class="flex justify-between items-center">
                         <button onclick="checkSentence(${sIdx})" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold rounded-lg shadow-sm transition flex items-center">
-                            <i class="fa-solid fa-check-double mr-1.5"></i>Kiểm tra & Xem câu mẫu
+                            <i class="fa-solid fa-check-double mr-1.5"></i>Kiểm tra & Xem câu mẫu có giải thích
                         </button>
                     </div>
 
                     <div id="sentence-result-${sIdx}" class="hidden mt-3 p-4 bg-white rounded-lg border border-indigo-100 shadow-sm space-y-2">
                         <div class="flex items-center justify-between border-b border-slate-100 pb-2">
-                            <span class="text-xs font-bold text-indigo-700 uppercase"><i class="fa-solid fa-lightbulb text-yellow-500 mr-1"></i>Gợi ý câu mẫu chuẩn HSK 4</span>
-                            <button onclick="speakChinese('${s.sampleHanzi}')" class="text-indigo-600 hover:text-indigo-800 text-xs font-medium flex items-center">
+                            <span class="text-xs font-bold text-indigo-700 uppercase"><i class="fa-solid fa-lightbulb text-yellow-500 mr-1"></i>Gợi ý câu mẫu chuẩn HSK 4 & Lời giải</span>
+                            <button onclick="speakChinese('${escapeQuotes(s.sampleHanzi)}')" class="text-indigo-600 hover:text-indigo-800 text-xs font-medium flex items-center">
                                 <i class="fa-solid fa-volume-high mr-1"></i>Nghe phát âm
                             </button>
                         </div>
                         <p class="text-lg font-bold text-slate-900">${s.sampleHanzi}</p>
                         <p class="text-xs text-indigo-600 font-medium">${s.samplePinyin}</p>
-                        <p class="text-sm text-slate-600 italic">Dịch nghĩa: "${s.sampleVietnamese}"</p>
+                        <p class="text-sm text-slate-600 italic bg-amber-50/50 p-2 rounded">${s.sampleVietnamese}</p>
                     </div>
                 </div>
             `).join('');
 
             currentFlashcardIndex = 0;
             updateFlashcard();
+            resetQuizQueue();
             renderQuiz();
+        }
+
+        function escapeQuotes(str) {
+            return (str || '').replace(/'/g, "\\'").replace(/\n/g, ' ');
         }
 
         function switchTab(tabName) {
@@ -442,7 +507,6 @@
             document.getElementById(`content-${tabName}`).classList.remove('hidden');
         }
 
-        // --- Speech Recognition & Error Correction Logic ---
         function initSpeechRecognition() {
             const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
             if (SpeechRecognition) {
@@ -455,7 +519,7 @@
 
         function startReadingPractice(originalText, tIdx) {
             if (!recognition) {
-                alert('Trình duyệt của bạn không hỗ trợ Micro thu âm tiếng Trung (Nên dùng Chrome/Edge).');
+                alert('Trình duyệt không hỗ trợ nhận diện giọng nói (Khuyên dùng Chrome hoặc Edge).');
                 return;
             }
 
@@ -477,7 +541,6 @@
                 micBtn.classList.remove('opacity-50');
                 diffBox.classList.remove('hidden');
 
-                // Compare Spoken Text with Original Text
                 const cleanOriginal = originalText.replace(/[^\u4e00-\u9fa5]/g, '');
                 const cleanSpoken = spokenText.replace(/[^\u4e00-\u9fa5]/g, '');
 
@@ -494,15 +557,15 @@
                     }
                 }
 
-                const accuracy = Math.round((correctCount / cleanOriginal.length) * 100);
+                const accuracy = Math.round((correctCount / (cleanOriginal.length || 1)) * 100);
                 diffResult.innerHTML = htmlResult;
-                scoreText.innerHTML = `Giọng bạn đọc được: "${spokenText}" <br> Độ chính xác: <span class="${accuracy >= 80 ? 'text-emerald-600' : 'text-rose-600'}">${accuracy}%</span> (Từ tô đỏ là từ bạn đọc sót hoặc phát âm sai)`;
+                scoreText.innerHTML = `Giọng bạn đọc được: "${spokenText}" <br> Độ chính xác: <span class="${accuracy >= 80 ? 'text-emerald-600' : 'text-rose-600'}">${accuracy}%</span> (Chữ tô đỏ là chữ đọc thiếu hoặc sai)`;
             };
 
             recognition.onerror = () => {
                 statusDiv.classList.add('hidden');
                 micBtn.classList.remove('opacity-50');
-                alert('Không thể nhận diện giọng nói. Bạn hãy thu âm lại và đọc rõ hơn.');
+                alert('Không thu được âm thanh. Xin vui lòng thử lại.');
             };
         }
 
@@ -512,7 +575,7 @@
 
         function updateFlashcard() {
             const vocabList = hskData[currentLessonIndex].vocab;
-            const current = vocabList[currentFlashcardIndex];
+            const current = vocabList[currentFlashcardIndex] || vocabList[0];
             document.getElementById('fcHanzi').innerText = current.hanzi;
             document.getElementById('fcPinyin').innerText = current.pinyin;
             document.getElementById('fcPos').innerText = current.pos;
@@ -540,27 +603,43 @@
         }
 
         function speakCurrentFlashcard() {
-            speakChinese(hskData[currentLessonIndex].vocab[currentFlashcardIndex].hanzi);
+            const vocabList = hskData[currentLessonIndex].vocab;
+            speakChinese(vocabList[currentFlashcardIndex].hanzi);
+        }
+
+        // Quiz Logic with Non-repeating Queue
+        function resetQuizQueue() {
+            const vocabList = hskData[currentLessonIndex].vocab;
+            quizQueue = [...vocabList].sort(() => 0.5 - Math.random());
         }
 
         function renderQuiz() {
             const vocabList = hskData[currentLessonIndex].vocab;
-            if (vocabList.length < 2) return;
-            const qItem = vocabList[Math.floor(Math.random() * vocabList.length)];
-            const wrongOptions = vocabList.filter(v => v.hanzi !== qItem.hanzi).map(v => v.meaning);
+            if (!vocabList || vocabList.length < 2) return;
+
+            if (quizQueue.length === 0) {
+                resetQuizQueue();
+            }
+
+            const qItem = quizQueue.pop();
+            const wrongOptions = vocabList.filter(v => v.hanzi !== qItem.hanzi)
+                                         .sort(() => 0.5 - Math.random())
+                                         .slice(0, 3)
+                                         .map(v => v.meaning);
+
             const options = [...wrongOptions, qItem.meaning].sort(() => 0.5 - Math.random());
 
             document.getElementById('quizContainer').innerHTML = `
                 <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
-                    <p class="text-sm text-slate-500 mb-1">Từ dưới đây có nghĩa là gì?</p>
+                    <p class="text-sm text-slate-500 mb-1">Từ dưới đây có nghĩa tiếng Việt là gì?</p>
                     <div class="flex items-center space-x-3 mb-4">
                         <span class="text-3xl font-bold text-slate-900">${qItem.hanzi}</span>
                         <span class="text-sm text-indigo-600 font-medium">(${qItem.pinyin})</span>
                         <button onclick="speakChinese('${qItem.hanzi}')" class="text-indigo-600 hover:text-indigo-800 p-1"><i class="fa-solid fa-volume-high"></i></button>
                     </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    <div id="quizOptionsGrid" class="grid grid-cols-1 md:grid-cols-2 gap-3">
                         ${options.map(opt => `
-                            <button onclick="checkQuizAnswer(this, '${opt === qItem.meaning}')" class="w-full text-left p-3 border border-slate-200 bg-white hover:bg-indigo-50/50 rounded-lg text-sm font-medium text-slate-700 transition">
+                            <button onclick="checkQuizAnswer(this, '${escapeQuotes(opt)}', '${escapeQuotes(qItem.meaning)}')" class="quiz-btn w-full text-left p-3 border border-slate-200 bg-white hover:bg-indigo-50/50 rounded-lg text-sm font-medium text-slate-700 transition">
                                 ${opt}
                             </button>
                         `).join('')}
@@ -570,18 +649,35 @@
             `;
         }
 
-        function checkQuizAnswer(btn, isCorrect) {
+        function checkQuizAnswer(btn, selectedOpt, correctMeaning) {
+            const allBtns = document.querySelectorAll('.quiz-btn');
+            allBtns.forEach(b => b.disabled = true);
+
             const feedback = document.getElementById('quizFeedback');
             feedback.classList.remove('hidden');
-            if (isCorrect === 'true') {
+
+            if (selectedOpt === correctMeaning) {
                 btn.className = "w-full text-left p-3 border border-emerald-500 bg-emerald-50 text-emerald-800 rounded-lg text-sm font-semibold";
                 feedback.className = "mt-4 p-3 rounded-lg text-sm font-semibold bg-emerald-100 text-emerald-800";
-                feedback.innerText = "Chính xác! Đã chọn đúng nghĩa của từ.";
+                feedback.innerHTML = `<i class="fa-solid fa-circle-check mr-1"></i> Chính xác! Đang tự động chuyển từ tiếp theo...`;
+                quizScoreCount += 10;
             } else {
                 btn.className = "w-full text-left p-3 border border-rose-500 bg-rose-50 text-rose-800 rounded-lg text-sm font-semibold";
                 feedback.className = "mt-4 p-3 rounded-lg text-sm font-semibold bg-rose-100 text-rose-800";
-                feedback.innerText = "Chưa chính xác! Hãy thử lại.";
+                feedback.innerHTML = `<i class="fa-solid fa-circle-xmark mr-1"></i> Chưa đúng! Đáp án đúng là: <strong>${correctMeaning}</strong>. Đang chuyển từ mới...`;
+                
+                allBtns.forEach(b => {
+                    if (b.innerText.trim() === correctMeaning) {
+                        b.className = "w-full text-left p-3 border border-emerald-500 bg-emerald-50 text-emerald-800 rounded-lg text-sm font-semibold";
+                    }
+                });
             }
+
+            document.getElementById('quizScore').innerText = `Điểm: ${quizScoreCount}`;
+
+            setTimeout(() => {
+                renderQuiz();
+            }, 1200);
         }
 
         function speakChinese(text) {
